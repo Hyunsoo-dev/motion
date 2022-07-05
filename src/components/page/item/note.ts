@@ -4,15 +4,19 @@ export class NoteComponent extends BaseComponent<HTMLElement> {
   constructor(title: string, content: string) {
     super(
       `<section class="note">
-        <p class="note__title"></p>
-        <div class="note__content"><div>
+        <h2 class="note__title"></h2>
+        <p class="note__content"><div>
       </section>`
     );
 
-    const titleElement = this.element.querySelector(".note__title") as HTMLElement;
+    const titleElement = this.element.querySelector(
+      ".note__title"
+    ) as HTMLHeadElement;
     titleElement.textContent = title;
 
-    const contentElement = this.element.querySelector(".note__content") as HTMLElement;
+    const contentElement = this.element.querySelector(
+      ".note__content"
+    ) as HTMLParagraphElement;
     contentElement.textContent = content;
   }
 }
