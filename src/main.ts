@@ -18,14 +18,15 @@ class App {
     const note = new NoteComponent("Note Title", "Note Test");
     note.attachTo(appRoot, "beforeend");
 
-    const video = new VideoComponent(
-      "cat video",
-      "https://youtu.be/BHZECDRvS60"
-    );
-    video.attachTo(appRoot, "beforeend");
-
     const todo = new TodoComponent("todo test", "go home");
     todo.attachTo(appRoot, "beforeend");
+
+    const video = new VideoComponent(
+      "Music video",
+      // "https://www.youtube.com/embed/_--SVJhQzx8"
+      "https://www.youtube.com/watch?v=_--SVJhQzx8"
+    );
+    video.attachTo(appRoot, "beforeend");
   }
 }
 
