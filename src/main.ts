@@ -18,10 +18,10 @@ class App {
     this.page.addChild(image);
 
     const note = new NoteComponent("Note Title", "Note Test");
-    note.attachTo(appRoot, "beforeend");
+    this.page.addChild(note);
 
     const todo = new TodoComponent("todo test", "go home");
-    todo.attachTo(appRoot, "beforeend");
+    this.page.addChild(todo);
 
     const video = new VideoComponent(
       "Music video",
@@ -29,6 +29,7 @@ class App {
       "https://www.youtube.com/watch?v=_--SVJhQzx8"
     );
     video.attachTo(appRoot, "beforeend");
+    this.page.addChild(video);
   }
 }
 
